@@ -52,7 +52,7 @@ function cubicReg(f,x;grad=x->ForwardDiff.gradient(f,x),H=x->symmetricADHessian(
         end
         if rho >= eta1
             x = x + p
-            #@printf "norm(x)=%f\n",norm(x)
+            #@printf "norm(x)=%f\n" norm(x)
             fx = f(x)
             gx = grad(x)
             #stopping-criteria reached
